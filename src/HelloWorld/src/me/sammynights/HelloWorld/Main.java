@@ -1,5 +1,6 @@
 package me.sammynights.HelloWorld;
 
+import org.bukkit.Location;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.EntityType;
@@ -34,11 +35,17 @@ public class Main extends JavaPlugin {
     		}
     		NPC npc = CitizensAPI.getNPCRegistry().createNPC(EntityType.PLAYER, "Pedro");
     		Player p = (Player) sender;
+    		Location location = p.getLocation();
     		p.sendMessage("Hello " + p.getName());
+    		npc.spawn(location);
+/*    		npc.addTrait(builder); */
     		return true;
     		}
-    	
-    		
-	return false;
+    return false;
 }
+
+	private Location getLocation(Player p) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
