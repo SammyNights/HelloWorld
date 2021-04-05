@@ -1,0 +1,10 @@
+name: HelloWorld
+version: 1
+author: SammyNights
+main: me.sammynights.HelloWorld.Main
+api-version: 1.16
+depend: [Citizens]
+
+commands:
+  Hello:
+    aliases: hi
